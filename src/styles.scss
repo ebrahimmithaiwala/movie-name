@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+
+  li {
+      padding: 12px;
+      cursor: pointer;
+
+      &.selected {
+          background-color: blue;
+      }
+
+      &:hover {
+          background-color: whitesmoke;
+      }
+  }
+}

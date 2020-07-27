@@ -8,6 +8,20 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root></app-root>
+
+  <ul>
+    <li *ngFor="let item of playlist; let $index = index"
+        (click)="onClickPlaylistItem(item, $index)"
+        [class.selected]="item === currentItem">
+        {{ item.title }}
+    </li>
+ </ul>
+ <video #media
+      [vgMedia]="media"
+      [src]="currentItem.src"
+      id="singleVideo"
+      preload="auto"
+      crossorigin>
+</video>
 </body>
 </html>
